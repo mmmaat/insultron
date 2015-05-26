@@ -1,12 +1,11 @@
 CC=g++
 BIN=insultron
-SRC=src/insultron.cpp src/main.cpp
-INC=include/insultron.h
+SRC=src/*.cpp
 FLAGS=-std=c++11 -Wall -O2 -I./include
 
 .PHONY: all clean
 
-all: $(SRC) $(INC)
+all: $(SRC)
 	$(CC) -o $(BIN) $(SRC) $(FLAGS)
 
 clean:
